@@ -12,7 +12,5 @@ containerizedConfig:
   path: /mcp
   args:
     - "-y"
-    - "@smithery/cli@latest"
-    - "run"
     - "@wonderwhy-er/desktop-commander"
 startupTimeoutSeconds: 300
