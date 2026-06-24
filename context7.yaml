@@ -2,13 +2,17 @@ name: Context7
 serverUserType: singleUser
 shortDescription: MSB benchmark server (Context7)
 description: |
-  MSB benchmark server `Context7`. Imported for MCP Security Bench experiments.
+  MSB benchmark server `Context7` (npx via stdio->HTTP runner). For MCP Security Bench experiments.
 metadata:
-  categories: MSB-Smithery
-runtime: npx
-npxConfig:
-  package: "@smithery/cli@latest"
+  categories: MSB
+runtime: containerized
+containerizedConfig:
+  image: msb-npx-runner:local
+  port: 8099
+  path: /mcp
   args:
+    - "-y"
+    - "@smithery/cli@latest"
     - "run"
     - "@upstash/context7-mcp"
 startupTimeoutSeconds: 300

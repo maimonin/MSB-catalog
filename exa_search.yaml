@@ -2,13 +2,17 @@ name: Exa Search
 serverUserType: singleUser
 shortDescription: MSB benchmark server (Exa_Search)
 description: |
-  MSB benchmark server `Exa_Search`. Imported for MCP Security Bench experiments.
+  MSB benchmark server `Exa_Search` (npx via stdio->HTTP runner). For MCP Security Bench experiments.
 metadata:
-  categories: MSB-Smithery
-runtime: npx
-npxConfig:
-  package: "@smithery/cli@latest"
+  categories: MSB
+runtime: containerized
+containerizedConfig:
+  image: msb-npx-runner:local
+  port: 8099
+  path: /mcp
   args:
+    - "-y"
+    - "@smithery/cli@latest"
     - "run"
     - "exa"
 startupTimeoutSeconds: 300

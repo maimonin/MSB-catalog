@@ -2,13 +2,17 @@ name: ClickUp
 serverUserType: singleUser
 shortDescription: MSB benchmark server (ClickUp_MCP_Server)
 description: |
-  MSB benchmark server `ClickUp_MCP_Server`. Imported for MCP Security Bench experiments.
+  MSB benchmark server `ClickUp_MCP_Server` (npx via stdio->HTTP runner). For MCP Security Bench experiments.
 metadata:
-  categories: MSB-NPX
-runtime: npx
-npxConfig:
-  package: "@taazkareem/clickup-mcp-server@latest"
-  args: []
+  categories: MSB
+runtime: containerized
+containerizedConfig:
+  image: msb-npx-runner:local
+  port: 8099
+  path: /mcp
+  args:
+    - "-y"
+    - "@taazkareem/clickup-mcp-server@latest"
 startupTimeoutSeconds: 300
 env:
   - key: CLICKUP_API_KEY

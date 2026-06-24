@@ -2,13 +2,17 @@ name: Linear
 serverUserType: singleUser
 shortDescription: MSB benchmark server (Linear)
 description: |
-  MSB benchmark server `Linear`. Imported for MCP Security Bench experiments.
+  MSB benchmark server `Linear` (npx via stdio->HTTP runner). For MCP Security Bench experiments.
 metadata:
-  categories: MSB-NPX
-runtime: npx
-npxConfig:
-  package: "@tacticlaunch/mcp-linear"
-  args: []
+  categories: MSB
+runtime: containerized
+containerizedConfig:
+  image: msb-npx-runner:local
+  port: 8099
+  path: /mcp
+  args:
+    - "-y"
+    - "@tacticlaunch/mcp-linear"
 startupTimeoutSeconds: 300
 env:
   - key: LINEAR_API_TOKEN

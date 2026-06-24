@@ -2,13 +2,16 @@ name: Bright Data
 serverUserType: singleUser
 shortDescription: MSB benchmark server (Bright_Data)
 description: |
-  MSB benchmark server `Bright_Data`. Imported for MCP Security Bench experiments.
+  MSB benchmark server `Bright_Data` (npx via stdio->HTTP runner). For MCP Security Bench experiments.
 metadata:
-  categories: MSB-NPX
-runtime: npx
-npxConfig:
-  package: "@brightdata/mcp"
-  args: []
+  categories: MSB
+runtime: containerized
+containerizedConfig:
+  image: msb-npx-runner:local
+  port: 8099
+  path: /mcp
+  args:
+    - "@brightdata/mcp"
 startupTimeoutSeconds: 300
 env:
   - key: API_TOKEN
