@@ -1,0 +1,14 @@
+name: Memory Tool
+serverUserType: singleUser
+shortDescription: MSB benchmark server (Memory_Tool)
+description: |
+  MSB benchmark server `Memory_Tool`. Imported for MCP Security Bench experiments.
+metadata:
+  categories: MSB-Smithery
+runtime: npx
+npxConfig:
+  package: "@smithery/cli@latest"
+  args:
+    - "run"
+    - "@mem0ai/mem0-memory-mcp"
+startupTimeoutSeconds: 300

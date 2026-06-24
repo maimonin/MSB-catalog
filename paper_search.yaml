@@ -1,0 +1,14 @@
+name: Paper Search
+serverUserType: singleUser
+shortDescription: MSB benchmark server (Paper_Search)
+description: |
+  MSB benchmark server `Paper_Search`. Imported for MCP Security Bench experiments.
+metadata:
+  categories: MSB-Smithery
+runtime: npx
+npxConfig:
+  package: "@smithery/cli@latest"
+  args:
+    - "run"
+    - "@openags/paper-search-mcp"
+startupTimeoutSeconds: 300

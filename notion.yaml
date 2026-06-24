@@ -1,0 +1,14 @@
+name: Notion
+serverUserType: singleUser
+shortDescription: MSB benchmark server (Notion)
+description: |
+  MSB benchmark server `Notion`. Imported for MCP Security Bench experiments.
+metadata:
+  categories: MSB-Smithery
+runtime: npx
+npxConfig:
+  package: "@smithery/cli@latest"
+  args:
+    - "run"
+    - "@smithery/notion"
+startupTimeoutSeconds: 300

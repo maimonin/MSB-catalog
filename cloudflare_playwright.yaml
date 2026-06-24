@@ -1,0 +1,12 @@
+name: Cloudflare Playwright
+serverUserType: singleUser
+shortDescription: MSB benchmark server (Cloudflare_Playwright)
+description: |
+  MSB benchmark server `Cloudflare_Playwright`. Imported for MCP Security Bench experiments.
+metadata:
+  categories: MSB-NPX
+runtime: npx
+npxConfig:
+  package: "@playwright/mcp@latest"
+  args: []
+startupTimeoutSeconds: 300

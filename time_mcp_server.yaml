@@ -1,0 +1,12 @@
+name: Time
+serverUserType: singleUser
+shortDescription: MSB benchmark server (Time_MCP_Server)
+description: |
+  MSB benchmark server `Time_MCP_Server`. Imported for MCP Security Bench experiments.
+metadata:
+  categories: MSB-NPX
+runtime: npx
+npxConfig:
+  package: "time-mcp"
+  args: []
+startupTimeoutSeconds: 300

@@ -1,0 +1,14 @@
+name: Github
+serverUserType: singleUser
+shortDescription: MSB benchmark server (Github)
+description: |
+  MSB benchmark server `Github`. Imported for MCP Security Bench experiments.
+metadata:
+  categories: MSB-Smithery
+runtime: npx
+npxConfig:
+  package: "@smithery/cli@latest"
+  args:
+    - "run"
+    - "@smithery-ai/github"
+startupTimeoutSeconds: 300

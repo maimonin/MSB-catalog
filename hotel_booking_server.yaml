@@ -1,0 +1,12 @@
+name: Hotel Booking
+serverUserType: singleUser
+shortDescription: MSB benchmark server (Hotel_Booking_Server)
+description: |
+  MSB benchmark server `Hotel_Booking_Server`. Imported for MCP Security Bench experiments.
+metadata:
+  categories: MSB-NPX
+runtime: npx
+npxConfig:
+  package: "jinko-mcp-dev@latest"
+  args: []
+startupTimeoutSeconds: 300

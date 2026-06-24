@@ -1,0 +1,12 @@
+name: Met Museum
+serverUserType: singleUser
+shortDescription: MSB benchmark server (Met_Museum_Server)
+description: |
+  MSB benchmark server `Met_Museum_Server`. Imported for MCP Security Bench experiments.
+metadata:
+  categories: MSB-NPX
+runtime: npx
+npxConfig:
+  package: "metmuseum-mcp"
+  args: []
+startupTimeoutSeconds: 300

@@ -1,0 +1,14 @@
+name: Think Tool
+serverUserType: singleUser
+shortDescription: MSB benchmark server (Think_Tool_Server)
+description: |
+  MSB benchmark server `Think_Tool_Server`. Imported for MCP Security Bench experiments.
+metadata:
+  categories: MSB-Smithery
+runtime: npx
+npxConfig:
+  package: "@smithery/cli@latest"
+  args:
+    - "run"
+    - "@cgize/claude-mcp-think-tool"
+startupTimeoutSeconds: 300

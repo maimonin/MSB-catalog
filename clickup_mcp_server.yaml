@@ -1,0 +1,28 @@
+name: ClickUp
+serverUserType: singleUser
+shortDescription: MSB benchmark server (ClickUp_MCP_Server)
+description: |
+  MSB benchmark server `ClickUp_MCP_Server`. Imported for MCP Security Bench experiments.
+metadata:
+  categories: MSB-NPX
+runtime: npx
+npxConfig:
+  package: "@taazkareem/clickup-mcp-server@latest"
+  args: []
+startupTimeoutSeconds: 300
+env:
+  - key: CLICKUP_API_KEY
+    name: Clickup Api Key
+    required: true
+    sensitive: true
+    description: Provide your own ClickUp CLICKUP_API_KEY.
+  - key: CLICKUP_TEAM_ID
+    name: Clickup Team Id
+    required: false
+    sensitive: false
+    description: Provide your own ClickUp CLICKUP_TEAM_ID.
+  - key: DOCUMENT_SUPPORT
+    name: Document Support
+    required: false
+    sensitive: false
+    description: Provide your own ClickUp DOCUMENT_SUPPORT.

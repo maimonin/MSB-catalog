@@ -1,0 +1,18 @@
+name: National Parks Information
+serverUserType: singleUser
+shortDescription: MSB benchmark server (National_Parks_Information_Server)
+description: |
+  MSB benchmark server `National_Parks_Information_Server`. Imported for MCP Security Bench experiments.
+metadata:
+  categories: MSB-NPX
+runtime: npx
+npxConfig:
+  package: "mcp-server-nationalparks"
+  args: []
+startupTimeoutSeconds: 300
+env:
+  - key: NPS_API_KEY
+    name: Nps Api Key
+    required: true
+    sensitive: true
+    description: Provide your own National Parks Information NPS_API_KEY.

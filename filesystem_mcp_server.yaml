@@ -1,0 +1,14 @@
+name: Filesystem
+serverUserType: singleUser
+shortDescription: MSB benchmark server (Filesystem_MCP_Server)
+description: |
+  MSB benchmark server `Filesystem_MCP_Server`. Imported for MCP Security Bench experiments.
+metadata:
+  categories: MSB-NPX
+runtime: npx
+npxConfig:
+  package: "@modelcontextprotocol/server-filesystem"
+  args:
+    - "/ABSOLUTE/PATH/TO/operation_space/output"
+    - "/ABSOLUTE/PATH/TO/operation_space/information"
+startupTimeoutSeconds: 300

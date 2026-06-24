@@ -1,0 +1,12 @@
+name: Sequential Thinking Tools
+serverUserType: singleUser
+shortDescription: MSB benchmark server (Sequential_Thinking_Tools)
+description: |
+  MSB benchmark server `Sequential_Thinking_Tools`. Imported for MCP Security Bench experiments.
+metadata:
+  categories: MSB-NPX
+runtime: npx
+npxConfig:
+  package: "@modelcontextprotocol/server-sequential-thinking"
+  args: []
+startupTimeoutSeconds: 300

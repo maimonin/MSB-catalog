@@ -1,0 +1,14 @@
+name: PubMed
+serverUserType: singleUser
+shortDescription: MSB benchmark server (PubMed_MCP_Server)
+description: |
+  MSB benchmark server `PubMed_MCP_Server`. Imported for MCP Security Bench experiments.
+metadata:
+  categories: MSB-Smithery
+runtime: npx
+npxConfig:
+  package: "@smithery/cli@latest"
+  args:
+    - "run"
+    - "@JackKuo666/pubmed-mcp-server"
+startupTimeoutSeconds: 300

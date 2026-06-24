@@ -1,0 +1,15 @@
+name: Supabase
+serverUserType: singleUser
+shortDescription: MSB benchmark server (Supabase_MCP_Server)
+description: |
+  MSB benchmark server `Supabase_MCP_Server`. Imported for MCP Security Bench experiments.
+metadata:
+  categories: MSB-Remote
+runtime: npx
+npxConfig:
+  package: "mcp-remote"
+  args:
+    - "https://mcp.supabase.com/mcp"
+    - "--header"
+    - "Authorization: Bearer <YOUR_SUPABASE_TOKEN>"
+startupTimeoutSeconds: 300

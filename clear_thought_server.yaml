@@ -1,0 +1,14 @@
+name: Clear Thought
+serverUserType: singleUser
+shortDescription: MSB benchmark server (Clear_Thought_Server)
+description: |
+  MSB benchmark server `Clear_Thought_Server`. Imported for MCP Security Bench experiments.
+metadata:
+  categories: MSB-Smithery
+runtime: npx
+npxConfig:
+  package: "@smithery/cli@latest"
+  args:
+    - "run"
+    - "@chirag127/clear-thought-mcp-server"
+startupTimeoutSeconds: 300

@@ -1,0 +1,13 @@
+name: Todoist Integration
+serverUserType: singleUser
+shortDescription: MSB benchmark server (Todoist_Integration)
+description: |
+  MSB benchmark server `Todoist_Integration`. Imported for MCP Security Bench experiments.
+metadata:
+  categories: MSB-Remote
+runtime: npx
+npxConfig:
+  package: "mcp-remote"
+  args:
+    - "https://ai.todoist.net/mcp"
+startupTimeoutSeconds: 300

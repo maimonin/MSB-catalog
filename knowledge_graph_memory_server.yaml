@@ -1,0 +1,12 @@
+name: Knowledge Graph Memory
+serverUserType: singleUser
+shortDescription: MSB benchmark server (Knowledge_Graph_Memory_Server)
+description: |
+  MSB benchmark server `Knowledge_Graph_Memory_Server`. Imported for MCP Security Bench experiments.
+metadata:
+  categories: MSB-NPX
+runtime: npx
+npxConfig:
+  package: "@modelcontextprotocol/server-memory"
+  args: []
+startupTimeoutSeconds: 300
