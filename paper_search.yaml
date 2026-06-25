@@ -16,3 +16,9 @@ containerizedConfig:
     - "run"
     - "@openags/paper-search-mcp"
 startupTimeoutSeconds: 300
+env:
+  - key: SMITHERY_API_KEY
+    name: Smithery API Key
+    required: true
+    sensitive: true
+    description: Your Smithery API key (from smithery.ai). Read from the container env by the Smithery CLI.
