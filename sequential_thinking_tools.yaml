@@ -1,16 +1,10 @@
-name: Sequential Thinking Tools
+name: Sequential Thinking
 serverUserType: singleUser
-shortDescription: MSB benchmark server (Sequential_Thinking_Tools)
+shortDescription: MSB benchmark server (sequential_thinking_tools)
 description: |
-  MSB benchmark server `Sequential_Thinking_Tools` (npx via stdio->HTTP runner). For MCP Security Bench experiments.
+  MSB benchmark server `sequential_thinking_tools` (runner container, registered as remote). For MCP Security Bench.
 metadata:
   categories: MSB
-runtime: containerized
-containerizedConfig:
-  image: msb-npx-runner:local
-  port: 8099
-  path: /mcp
-  args:
-    - "-y"
-    - "@modelcontextprotocol/server-sequential-thinking"
-startupTimeoutSeconds: 300
+runtime: remote
+remoteConfig:
+  fixedURL: http://172.17.0.1:8103/mcp

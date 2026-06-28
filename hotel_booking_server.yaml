@@ -1,15 +1,10 @@
 name: Hotel Booking
 serverUserType: singleUser
-shortDescription: MSB benchmark server (Hotel_Booking_Server)
+shortDescription: MSB benchmark server (hotel_booking_server)
 description: |
-  MSB benchmark server `Hotel_Booking_Server` (npx via stdio->HTTP runner). For MCP Security Bench experiments.
+  MSB benchmark server `hotel_booking_server` (runner container, registered as remote). For MCP Security Bench.
 metadata:
   categories: MSB
-runtime: containerized
-containerizedConfig:
-  image: msb-npx-runner:local
-  port: 8099
-  path: /mcp
-  args:
-    - "jinko-mcp-dev@latest"
-startupTimeoutSeconds: 300
+runtime: remote
+remoteConfig:
+  fixedURL: http://172.17.0.1:8105/mcp

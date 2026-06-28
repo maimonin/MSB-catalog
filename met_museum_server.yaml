@@ -1,16 +1,10 @@
 name: Met Museum
 serverUserType: singleUser
-shortDescription: MSB benchmark server (Met_Museum_Server)
+shortDescription: MSB benchmark server (met_museum_server)
 description: |
-  MSB benchmark server `Met_Museum_Server` (npx via stdio->HTTP runner). For MCP Security Bench experiments.
+  MSB benchmark server `met_museum_server` (runner container, registered as remote). For MCP Security Bench.
 metadata:
   categories: MSB
-runtime: containerized
-containerizedConfig:
-  image: msb-npx-runner:local
-  port: 8099
-  path: /mcp
-  args:
-    - "-y"
-    - "metmuseum-mcp"
-startupTimeoutSeconds: 300
+runtime: remote
+remoteConfig:
+  fixedURL: http://172.17.0.1:8102/mcp

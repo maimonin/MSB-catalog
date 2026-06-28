@@ -1,21 +1,10 @@
 name: Bright Data
 serverUserType: singleUser
-shortDescription: MSB benchmark server (Bright_Data)
+shortDescription: MSB benchmark server (bright_data)
 description: |
-  MSB benchmark server `Bright_Data` (npx via stdio->HTTP runner). For MCP Security Bench experiments.
+  MSB benchmark server `bright_data` (runner container, registered as remote). For MCP Security Bench.
 metadata:
   categories: MSB
-runtime: containerized
-containerizedConfig:
-  image: msb-npx-runner:local
-  port: 8099
-  path: /mcp
-  args:
-    - "@brightdata/mcp"
-startupTimeoutSeconds: 300
-env:
-  - key: API_TOKEN
-    name: Api Token
-    required: true
-    sensitive: true
-    description: Provide your own Bright Data API_TOKEN.
+runtime: remote
+remoteConfig:
+  fixedURL: http://172.17.0.1:8108/mcp

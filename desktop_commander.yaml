@@ -1,16 +1,10 @@
 name: Desktop Commander
 serverUserType: singleUser
-shortDescription: MSB benchmark server (Desktop_Commander)
+shortDescription: MSB benchmark server (desktop_commander)
 description: |
-  MSB benchmark server `Desktop_Commander` (npx via stdio->HTTP runner). For MCP Security Bench experiments.
+  MSB benchmark server `desktop_commander` (runner container, registered as remote). For MCP Security Bench.
 metadata:
   categories: MSB
-runtime: containerized
-containerizedConfig:
-  image: msb-npx-runner:local
-  port: 8099
-  path: /mcp
-  args:
-    - "-y"
-    - "@wonderwhy-er/desktop-commander"
-startupTimeoutSeconds: 300
+runtime: remote
+remoteConfig:
+  fixedURL: http://172.17.0.1:8106/mcp
